@@ -16,20 +16,21 @@ Submission date: 7/27/2014
 * getMean_Std(...)    - Extract mean and standard deviation from the data set
 
 
-```R
-
-**run_analysis <- function()**
+```r
+run_analysis <- function()
 {
-
     ### Step 1: Merges the training and the test sets to create one data set.
     # 
-    # Read the test data by calling readData('test/X_test.txt', 'test/y_test.txt', 'test/subject.txt').
+    # Read the test data by calling:
+    #     readData('test/X_test.txt', 'test/y_test.txt', 'test/subject.txt')
 	# The readData function does the following: 
 	#	* Read the  data from X, y, and subject into 3 separate data tables.
 	#	* Use the labels in 'features.txt' to name the 561 columns for X table. 
-	#	* Set the column name for y to 'Activity'. Then, it replaces each value with the activity name from 'activity_labels.txt'.
+	#	* Set the column name for y to 'Activity'. Then, it replaces each value 
+    #     with the activity name from 'activity_labels.txt'.
 	#
-    # Read the train data by calling readData('train/X_train.txt', 'train/y_train.txt', and 'train/subject_train.txt').
+    # Read the train data by calling:
+    #     readData('train/X_train.txt', 'train/y_train.txt', and 'train/subject_train.txt')
     # 
 	# Merge the test and training data into one data set.
 	#
@@ -47,10 +48,9 @@ Submission date: 7/27/2014
 }
 ```
 
-
-**readData <- function(file\_X, file\_y, file\_subject)**
+```r
+readData <- function(file\_X, file\_y, file\_subject)
 {
-
     # Purpose: Read the data files X_*, y_*, and subject_*. Then
     # merge data from the three files into one data set.
     #
@@ -78,8 +78,10 @@ Submission date: 7/27/2014
     #   Returns the merged data set that cbind(subject_*, y_*, X_*)
     #   together.
 }
+```
 
-**getMean\_Std <- function(dataTable)**
+```r
+getMean\_Std <- function(dataTable)
 {
 
     # Purpose: Extract the mean and standard deviation
@@ -91,3 +93,4 @@ Submission date: 7/27/2014
     #   Returns a table with columns that has mean and standard
     #   deviation measurements only.
 }
+```
