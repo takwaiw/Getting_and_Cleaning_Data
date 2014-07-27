@@ -36,20 +36,23 @@ run_analysis <- function()
 	#
     ### End #1
     
-    ### Step #2: Extracts only the measurements on the mean and standard deviation for each measurement.
+    ### Step #2: Extracts only the measurements on the mean and standard deviation for each 
+    #            measurement.
     # Search for column names in the merged data set that contains '%mean()%' or '%std()%. 
 	# Use this list of column names to subset the merged data set.
     ### End #2
     
-    ### Step #3: Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-    # Use the aggregate(...) function to calculate mean for each variables in the data table from Step #2.
+    ### Step #3: Creates a second, independent tidy data set with the average of each variable
+    #            for each activity and each subject.
+    # Use the aggregate(...) function to calculate mean for each variables in the data table 
+    # from Step #2.
     # Write out the tidy data set to a CSV file 'average_by_subject_activity.txt'
     ### End #3
 }
 ```
 
 ```r
-readData <- function(file\_X, file\_y, file\_subject)
+readData <- function(file_X, file_y, file_subject)
 {
     # Purpose: Read the data files X_*, y_*, and subject_*. Then
     # merge data from the three files into one data set.
@@ -81,7 +84,7 @@ readData <- function(file\_X, file\_y, file\_subject)
 ```
 
 ```r
-getMean\_Std <- function(dataTable)
+getMean_Std <- function(dataTable)
 {
 
     # Purpose: Extract the mean and standard deviation
